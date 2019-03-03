@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+titles = ['hoge', 'fuga', 'piyo']
+#3.times do |i|
+titles.each do |title|
+  puts title
+  Book.create(title: title)
+end
