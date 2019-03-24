@@ -1,0 +1,14 @@
+
+<%= form_with model: @book, local: true do |form| %>
+  <table border="1"> 
+    <thead>
+      <th>title</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= form.text_field :title %></td>
+      </tr>
+    </tbody>
+  </table>
+  <%= form.submit %>
+<% end %>
