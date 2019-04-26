@@ -1,6 +1,14 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all
+    puts "------------------ここがパラメータです"
+    puts params
+
+    if params[:title].blank?
+      @books = Book.all
+    else
+      @books = Book.where(title: params[:title])
+    end
+    
   end
 
   def show
